@@ -1,8 +1,14 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class Job(BaseModel):
-    # Job Model
+    # Job 
+    id: int
     title: str
     department: str
-    description: str
+    description: Optional[str] = None
+
+
+    class Config:
+        orm_mode = True

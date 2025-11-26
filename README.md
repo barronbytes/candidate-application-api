@@ -1,2 +1,12 @@
-# candidate-application-api
-REST API for submitting job applications
+# Candidate Application API [🏡](https://github.com/barronbytes/candidate-application-api)
+
+
+## Prerequisites [🔝](#candidate-application-api-)
+
+Before running this project locally, ensure you ahve the following installed:
+
+- IDE (VS Code, PyCharm, etc.)
+- Instally Python 3.10+ version > for type hinting compatability
+- Install **pydantic** from terminal: `pip install pydantic`
+- Install **FastAPI** from terminal: `pip install fastapi`
+- Install **SQLAlchemy** from terminal: `pip install SQLAlchemy`
