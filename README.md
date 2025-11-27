@@ -52,7 +52,7 @@ This project contained a one-to-many relationship between jobs and applications,
 
 ## Usage [🔝](#candidate-application-api-)
 
-The project lacks a frontend. The project can be run in the terminal by typing the command `uvicorn main:app --reload`. Successful runs are followed by a single white page opening with the text "Welcome to the Candidate Application API!". Sample curl commands to use can be found in the unit test file.
+The project lacks a frontend. The project can be run in the terminal by typing the command `uvicorn main:app --reload`. Successful runs are followed by a single white page opening with the text _"Welcome to the Candidate Application API!"_. Sample curl commands to use can be found in the unit test file.
 
 ## Project Overview [🔝](#candidate-application-api-)
 
