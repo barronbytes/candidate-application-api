@@ -14,6 +14,13 @@ class TestApplicationSubmission(unittest.TestCase):
         # Ensure table exists before tests run
         Base.metadata.create_all(bind=engine)
 
+
+    @classmethod
+    def tearDownClass(cls):
+        # Drop all tables after tests run
+        Base.metadata.drop_all(bind=engine)
+
+
     def test_create_application_success(self):
         payload = {
             "job_id": 1,
@@ -30,6 +37,7 @@ class TestApplicationSubmission(unittest.TestCase):
         self.assertEqual(data["email"], payload["email"])
         self.assertEqual(data["resume_file_path"], payload["resume_file_path"])
 
+
     def test_create_application_missing_name(self):
         payload = {
             "job_id": 1,
@@ -40,6 +48,7 @@ class TestApplicationSubmission(unittest.TestCase):
         # FastAPI/Pydantic should reject this with 422 Unprocessable Entity
         self.assertEqual(response.status_code, 422)
 
+
     def test_create_application_invalid_email(self):
         payload = {
             "job_id": 1,
@@ -49,6 +58,7 @@ class TestApplicationSubmission(unittest.TestCase):
         }
         response = client.post("/api/applications", json=payload)
         self.assertEqual(response.status_code, 422)
+
 
     def test_create_application_missing_resume(self):
         payload = {
