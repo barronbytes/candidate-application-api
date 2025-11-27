@@ -1,13 +1,10 @@
 from fastapi import FastAPI
-from route_company import router as company_router
-from route_applicant import router as applicant_router
+from routes import router as api_router
 
 
+# Create FastAPI instance and add routes
 app = FastAPI()
-
-# Include routers for user types
-app.include_router(company_router)
-app.include_router(applicant_router)
+app.include_router(api_router)
 
 
 # Root endpoint: welcome message in place to confirm API is running
