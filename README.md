@@ -14,6 +14,7 @@ _Testing performed with unittest_
 
 ``` bash
 candidate-application-api/
+├── assets/                     # Media files
 ├── LICENSE                     # Project license (MIT)
 ├── .gitignore            
 ├── README.md
@@ -43,7 +44,7 @@ pip install SQLAlchemy
 pip install uvicorn
 ```
 
-## Data Overview
+## Data Overview [🔝](#candidate-application-api-)
 
 This project contained a one-to-many relationship between jobs and applications, respectively.
 
