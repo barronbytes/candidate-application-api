@@ -49,3 +49,23 @@ pip install uvicorn
 This project contained a one-to-many relationship between jobs and applications, respectively.
 
 <img src="assets/ERD_diagram.PNG" alt="ERD Diagram of jobs and applications table relationships" width="60%">
+
+## Usage [🔝](#candidate-application-api-)
+
+The project lacks a frontend. The project can be run in the terminal by typing the command `uvicorn main:app --reload`. Successful runs are followed by a single white page opening with the text "Welcome to the Candidate Application API!". Sample curl commands to use can be found in the unit test file.
+
+## Project Overview [🔝](#candidate-application-api-)
+
+![API design and file structure](assets/API_diagram.png)
+
+Source: [Implementing FastAPI Services - Abstraction and Separation of Concerns](https://camillovisini.com/coding/abstracting-fastapi-service), by Camillo Visini
+
+This project demonstrated usage of FastAPI to create API endpoints in four phases:
+1) **Schemas:** First, BaseModel classes for jobs and applications were created with Pydantic. This involved creating the API shape of request and response objects.
+2) **Models:** Next, SQLite and SQLAlchemy were chosen as database tools. Their conventions were followed to enforce ORM object shapes for table records.
+3) **Services:** Then, CRUD operations were created to act on tables. Logic had to be introduced to convert Pydantic objects to ORM objects, and vice versa.
+4) **Routes:** Finally, API endpoints were formed as destinations for HTTP METHODS to act upon.
+
+## Credits [🔝](#candidate-application-api-)
+
+The official documentation for Pydantic and SQLLite were useful in getting started with this project.
