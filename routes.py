@@ -25,7 +25,7 @@ def read_all_jobs_route(db: Session = Depends(get_db)) -> list[Job]:
 
 
 # Endpoint: POST api/applications
-@router.post(path="applications", response_model=Application)
+@router.post(path="/applications", response_model=Application)
 def create_application_route(application: ApplicationCreate, db: Session = Depends(get_db)) -> Application:
     """
     Handles HTTP POST requests at /api/applications to save new job applications to applications table.
@@ -38,7 +38,7 @@ def create_application_route(application: ApplicationCreate, db: Session = Depen
                     "job_id": 1,
                     "candidate_name": "John Doe",
                     "email": "johndoe@candidate.com",
-                    "resume_file_path": "/resummes/johndoe.pdf",
+                    "resume_file_path": "/resumes/johndoe.pdf",
                     "cover_letter": "Dear...Sincerely, John."
                 }'
     """
