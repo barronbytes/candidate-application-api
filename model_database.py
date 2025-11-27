@@ -1,5 +1,6 @@
 import sqlalchemy as sa
-from sqlalchemy.orm import DeclarativeBase, sessionmaker
+from sqlalchemy.orm import DeclarativeBase, sessionmaker, Session
+from typing import Generator
 
 
 # SQLite database file (relative path)
@@ -14,6 +15,20 @@ SessionLocal = sessionmaker(
     autoflush=False, # must use command session.flush() to query changes
     bind=engine
 )
+
+
+# Dependency function for FastAPI routes
+def get_db() -> Generator[Session, None, None]:
+    """
+    Retrieves database session for FastAPI routes.
+    Session closes once the API request ends.
+    """
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
 
 # Parent class for ORM models
 class Base(DeclarativeBase):
