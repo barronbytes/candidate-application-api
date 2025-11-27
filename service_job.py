@@ -6,7 +6,8 @@ from model_table_job import Job as JobTable
 
 def read_all_jobs(db: Session) -> list[Job]:
     """
-    Return all active job openings.
+    Queries the entire job table (SQLAlchemy ORM objects) and returns a list of
+    all active job postings (Pydantic Job schema objects).
 
     Parameters:
         db(Session): Active SQLAlchemy session used to query the jobs table.
