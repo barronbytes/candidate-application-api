@@ -69,3 +69,5 @@ This project demonstrated usage of FastAPI to create API endpoints in four phase
 ## Credits [🔝](#candidate-application-api-)
 
 The official documentation for Pydantic and SQLLite were useful in getting started with this project.
+
+Microsoft Copilot was used to create the unittest file.
