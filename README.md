@@ -46,3 +46,5 @@ pip install uvicorn
 ## Data Overview
 
 This project contained a one-to-many relationship between jobs and applications, respectively.
+
+<img src="assets/ERD_diagram.PNG" alt="ERD Diagram of jobs and applications table relationships" width="60%">
