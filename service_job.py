@@ -10,9 +10,9 @@ def read_all_jobs(db: Session) -> list[Job]:
     all active job postings (Pydantic Job schema objects).
 
     Parameters:
-        db(Session): Active SQLAlchemy session used to query the jobs table.
+        db(Session): Active SQLAlchemy session used to execute queries on table.
     Returns:
-        list[Job]: Pydantic Job schema objects.
+        list[Job]: Active job postings.
     """
     sql = select(JobTable)  # SELECT * FROM jobs
     jobs = db.execute(sql).scalars().all()
