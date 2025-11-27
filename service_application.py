@@ -3,7 +3,7 @@ from schema_application import Application, ApplicationCreate
 from model_table_application import Application as ApplicationTable
 
 
-def create_application(db: Session, application: ApplicationCreate) -> Application:
+def create_application(application: ApplicationCreate, db: Session) -> Application:
     """
     Saves new job applicant data from a person (Pydantic ApplicationCreate schema object)
     to be saved as a new record in the application table (SQLAlchemy ORM object).
