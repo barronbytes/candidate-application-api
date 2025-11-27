@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date
 from pydantic import BaseModel, EmailStr, ConfigDict
 from typing import Optional
 
@@ -11,7 +11,7 @@ class Application(BaseModel):
     email: EmailStr
     resume_file_path: str
     cover_letter: Optional[str] = None
-    submitted_date: datetime
+    submitted_date: date
 
 
     # Pydantic expect dictionary input by default

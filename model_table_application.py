@@ -1,5 +1,5 @@
 import datetime
-from sqlalchemy import Column, ForeignKey, Integer, String, Text, DateTime
+from sqlalchemy import Column, ForeignKey, Integer, String, Text, Date
 from sqlalchemy.orm import relationship
 from model_database import Base
 
@@ -16,7 +16,7 @@ class Application(Base):
     candidate_name = Column(String, nullable=False)
     email = Column(String, nullable=False)
     resume_file_path = Column(String, nullable=False)
-    submitted_date = Column(DateTime, default=datetime.datetime.utcnow)
+    submitted_date = Column(Date, default=datetime.date.today)
 
     # Optional fields
     cover_letter = Column(Text)
