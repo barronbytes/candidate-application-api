@@ -10,3 +10,4 @@ Before running this project locally, ensure you ahve the following installed:
 - Install **pydantic** from terminal: `pip install pydantic`
 - Install **FastAPI** from terminal: `pip install fastapi`
 - Install **SQLAlchemy** from terminal: `pip install SQLAlchemy`
+- Install **ASGI server** (e.g., **uvicorn**): `pip install uvicorn`
