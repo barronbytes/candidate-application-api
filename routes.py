@@ -24,7 +24,7 @@ def read_all_jobs_route(db: Session = Depends(get_db)) -> list[Job]:
     return read_all_jobs(db)
 
 
-# Endpoint: POST api/applications
+# Endpoint: POST /api/applications
 @router.post(path="/applications", response_model=Application)
 def create_application_route(application: ApplicationCreate, db: Session = Depends(get_db)) -> Application:
     """
